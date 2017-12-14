@@ -56,7 +56,7 @@ database.ref().on("child_added", function(childSnapshot, prevChildKey) {
   var diffTime = moment().diff(moment(firstTrainTime), "minutes");
   var timeRemainder = diffTime % frequency;
   var minsAway = frequency - timeRemainder;
-  var nextArrival = moment().add(minsAway, "minutes").format("HH:mm A");
+  var nextArrival = moment().add(minsAway, "minutes").format("hh:mm A");
 
   // Add each train's data into the table
   $("#trainSchedule> tbody").append("<tr><td>" + trainName + "</td><td>" + destination + "</td><td>" +
